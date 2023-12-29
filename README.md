@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+<h1>CEP Finder App</h1>
+This React application allows users to find address details by entering a Brazilian ZIP code (CEP). </br>
+It utilizes the ViaCEP API to fetch and display address information, and it keeps track of previously searched ZIP codes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>Features</h2>
+<b>CEP Search:</b> Enter a Brazilian ZIP code (CEP) in the input field to retrieve and display address details. </br>
+<b>Error Handling: </b>If the entered CEP is not found or invalid, an error message will be displayed.</br>
+<b>Previous Searches:</b> The application keeps track of previously searched CEPs, and they are displayed in a list.
 
-## Available Scripts
+<h2>Components</h2>
 
-In the project directory, you can run:
+<b>App:</b> The main component that manages state and contains the UI elements.
 
-### `npm start`
+<h2>State Management</h2>
+<ul>
+<li><b>endereco:</b> Holds the address information for the currently searched CEP.</li>
+<li><b>cepUser:</b> Stores the current input value for the ZIP code.</li>
+<li><b>erro:</b> Displays error messages for invalid or not found CEPs.</li>
+<li><b>allResults:</b> Keeps track of all previously searched CEPs.</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h2>Dependencies</h2>
+<b>react:</b> The core library for building the user interface in React. </br>
+<b>axios:</b> A promise-based HTTP client for making requests to the ViaCEP API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h2>Development</h2>
+This project uses the <b>React framework</b> for building user interfaces.</br>
+The application fetches data from the <b>ViaCEP API </b>to retrieve address details.</br>
+State management is achieved using the <b>useState hook</b> for managing component-level state.</br>
+The <b>useEffect hook</b> is used to trigger side effects, such as updating the list of previous searches when the current address is updated.</br>
+Feel free to explore the codebase and customize it according to your needs!
